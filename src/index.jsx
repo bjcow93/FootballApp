@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
+import Hello from './components/myHeading'
 
 class App extends Component{
     constructor(props){
@@ -8,7 +9,7 @@ class App extends Component{
 
     render(){
         return(
-            <Heading />
+            <Hello />
         )
     }
 }
