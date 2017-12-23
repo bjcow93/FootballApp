@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import Hello from './components/myHeading'
+import Hello from './components/myHeading.jsx'
 
 class App extends Component{
     constructor(props){

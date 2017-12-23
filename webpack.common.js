@@ -1,7 +1,7 @@
 const webpack = require('webpack'),
       path = require('path'),
       CleanWebpackPlugin = require('clean-webpack-plugin');
-      HtmlWebpackPlugin = require('html-webpack-plugin');
+    //   HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: path.resolve(__dirname, 'src', 'index.jsx'),
@@ -11,9 +11,9 @@ module.exports = {
     },
     plugins: [
              new CleanWebpackPlugin(['public/js']),
-             new HtmlWebpackPlugin({
-               title: 'Production'
-             })
+            //  new HtmlWebpackPlugin({
+            //    title: 'Production'
+            //  })
            ]
     ,
     module: {
