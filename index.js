@@ -2,12 +2,15 @@ const express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
     index = require('./routes/index'),
-    path = require('path')
+    path = require('path'),
+    database = require('./mongoose/mongoose')
 
 app.use('/static', express.static('./public'))
 
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'));
+
+app.set('database', database)
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({

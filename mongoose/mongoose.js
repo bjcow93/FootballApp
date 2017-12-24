@@ -1,5 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const host = 'mongodb://127.0.0.1:27017/'
+const database = 'databasename'
+
+
 const options = {
     useMongoClient: true,
     autoIndex: false, // Don't build indexes
@@ -11,7 +15,7 @@ const options = {
 };
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/portfolio', options)
+mongoose.connect(host+database, options)
 .then(
     () => {console.log('DB Connected')},
     err => {console.log(err)}

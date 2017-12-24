@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently \"nodemon index\" \"webpack --config webpack.dev.js\"",
-    "build": "webpack --config webpack.prod.js",
-    "webpack": "webpack"
+    "build": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
