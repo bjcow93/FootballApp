@@ -1,5 +1,38 @@
-{
-    "presets": [
-        "react", "env", "stage-1"
-    ]
-}
+// {
+//     "presets": [
+//         "react", "env", "stage-1", "@babel/preset-react"
+//     ], 
+//     "plugins": [
+//         "@babel/plugin-proposal-class-properties"
+//     ]
+// }
+// {
+//     "presets": [
+//         [
+//         "@babel/preset-env"
+//         ]
+//     ],
+//     "plugins": [
+//         "@babel/plugin-proposal-class-properties"
+//     ]
+// }
+// {
+//     "presets": [
+//         "es2015",
+//         "env",
+//         "react",
+//         "stage-2"
+//     ]
+// },
+
+// {
+//     "presets": [
+//         "@babel/preset-env",
+//         "@babel/preset-react"
+//     ],
+//     "plugins": [
+//         [
+//             "@babel/plugin-proposal-class-properties"
+//         ]
+//     ]
+// }

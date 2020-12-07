@@ -1,5 +1,5 @@
 const webpack = require('webpack'),
-      merge = require('webpack-merge'),
+      {merge} = require('webpack-merge'),
       common = require('./webpack.common.js'),
       path = require('path');
 
@@ -9,7 +9,7 @@ const webpack = require('webpack'),
    devServer: {
     contentBase: path.join(__dirname, 'public'),
     compress: true,
-    port: 3000
+    port: 5000
    },
    watch: true
  });
