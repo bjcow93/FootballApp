@@ -1,5 +1,5 @@
 {
-  "name": "express-react-webpack-babel-boilerplate",
+  "name": "footballapp",
   "version": "1.0.0",
   "description": "This a boilerplate for Express and React Applications that provides both developer and production builds.",
   "main": "index.js",
@@ -10,43 +10,33 @@
     "debug": "node --inspect index.js",
     "src-install": "yarn --cwd ./frontend/ install",
     "frontend": "yarn --cwd ./frontend/ start",
-    "dev": "concurrently \"yarn run server\" \"yarn run frontend\" \"webpack --config webpack.dev.js\"",
-    "build": "webpack --config webpack.prod.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shahnawaz19415/express-react-webpack-babel-boilerplate.git"
+    "dev": "concurrently \"yarn run server\" \"yarn run frontend\" \"webpack --config config/webpack.dev.js\"",
+    "build": "webpack --config config/webpack.prod.js"
   },
   "author": "Ben Cowden",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/shahnawaz19415/express-react-webpack-babel-boilerplate/issues"
-  },
-  "homepage": "https://github.com/shahnawaz19415/express-react-webpack-babel-boilerplate#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "dotenv": "^8.2.0",
+    "eslint-webpack-plugin": "^2.4.1",
+    "express": "^4.16.4",
+    "html-webpack-plugin": "^4.5.0",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.3.15",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^13.5.1",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
     "@babel/core": "^7.12.9",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/plugin-syntax-jsx": "^7.12.1",
     "@babel/preset-env": "^7.12.7",
     "@babel/preset-react": "^7.12.7",
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.18.3",
-    "dotenv": "^8.2.0",
-    "ejs": "^3.1.5",
-    "express": "^4.16.4",
-    "jsonwebtoken": "^8.4.0",
-    "mongoose": "^5.3.15",
-    "passport": "^0.4.0",
-    "passport-jwt": "^4.0.0",
-    "validator": "^13.5.1"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
     "babel-loader": "^8.2.2",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-1": "^6.24.1",
     "clean-webpack-plugin": "^3.0.0",
     "concurrently": "^5.3.0",
     "css-loader": "^5.0.1",

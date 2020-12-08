@@ -1,11 +1,3 @@
-
-// Reference .env vars off of the process.env object
-// MongoClient.connect(process.env.DB_CONN, function (err, db) {
-//     if (!err) {
-//         console.log("We are connected");
-//     }
-// });
-
 require('dotenv').config();
 const express = require("express");
 const app = express();

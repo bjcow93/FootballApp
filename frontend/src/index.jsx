@@ -1,20 +1,3 @@
-// import React, { Component } from 'react'
-// import ReactDOM from 'react-dom'
-// import Hello from './components/myHeading.jsx'
-
-// class App extends Component{
-//     constructor(props){
-//         super(props)
-//     }
-
-//     render(){
-//         return(
-//             <Hello />
-//         )
-//     }
-// }
-// ReactDOM.render(<App/>, document.getElementById("root"))
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
@@ -44,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // } else {
     //     store = configureStore({});
     // }
-    const root = document.getElementById('root');
 
-    ReactDOM.render(<Root />, root);
+    ReactDOM.render(<Root/>, document.getElementById("root"));
 });
