@@ -8,4 +8,4 @@
     To start up the express server, the webpack server, and open up the app in the browser
 
 4. `yarn run build`
-    To get the production build of the modules. Then run "node index" to statr the server
+    To get the production build of the modules. Then run "node express_server" to start the server
