@@ -1,22 +1,19 @@
 const webpack = require('webpack'),
-      path = require('path'),
-      {CleanWebpackPlugin} = require('clean-webpack-plugin'),
-      HtmlWebpackPlugin = require('html-webpack-plugin');
+      path = require('path');
+    //   HtmlWebpackPlugin = require('html-webpack-plugin')
+
 
 module.exports = {
     entry: path.resolve(__dirname, '..', 'frontend', 'src', 'index.jsx'),
     output: {
-        path: path.resolve(__dirname, '..', 'frontend', 'public'),
+        path: path.resolve(__dirname, '..', 'frontend', 'public', 'js'),
         filename: 'bundle.js'
     },
-    plugins: [
-        new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
-        new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, '..', 'frontend', 'src', 'index.ejs'),
-            scriptLoading: 'defer'
-        }),
-    ]
+    plugins: []
     ,
+    resolve: {
+        extensions: ['.jsx', '.js', '*', '.ejs']
+    },
     module: {
         rules: [
             {
@@ -40,20 +37,17 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env', '@babel/preset-react'],
-                        // plugins: ['@babel/plugin-syntax-jsx']
+                        presets: ['@babel/preset-env', '@babel/preset-react']
                     }
-
                 }
             }
         ]
     },
+    performance: { hints: false }
     // resolve: {
     //     alias: {
 
     //   }
     // },
-    resolve: {
-        extensions: ['.jsx', '.js', '*', '.ejs']
-    }
+    // watch: true
 };

@@ -1,16 +1,13 @@
 {
   "name": "footballapp",
   "version": "1.0.0",
-  "description": "This a boilerplate for Express and React Applications that provides both developer and production builds.",
-  "main": "index.js",
+  "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "server": "nodemon server.js",
+    "frontend-install": "yarn --cwd ./frontend/ install",
+    "server": "nodemon express_server.js",
+    "start": "concurrently \"yarn run server\" \"webpack serve --config ./webpack/webpack.dev.js\"",
     "debug": "node --inspect index.js",
-    "src-install": "yarn --cwd ./frontend/ install",
-    "frontend": "yarn --cwd ./frontend/ start",
-    "dev": "concurrently \"yarn run server\" \"yarn run frontend\" \"webpack --config config/webpack.dev.js\"",
     "build": "webpack --config config/webpack.prod.js"
   },
   "author": "Ben Cowden",
@@ -26,8 +23,7 @@
     "mongoose": "^5.3.15",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
-    "validator": "^13.5.1",
-    "webpack-dev-server": "^3.11.0"
+    "validator": "^13.5.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.0",
@@ -45,6 +41,8 @@
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^5.10.0",
     "webpack-cli": "^4.2.0",
-    "webpack-merge": "^5.4.0"
+    "webpack-merge": "^5.4.0",
+    "webpack-dev-middleware": "^4.0.2",
+    "webpack-dev-server": "^3.11.0"
   }
 }
