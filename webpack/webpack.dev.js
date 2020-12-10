@@ -6,6 +6,9 @@ const webpack = require('webpack'),
 module.exports = merge(common, {
   devtool: 'inline-source-map',
   devServer: {
+    // inline: false,
+    // liveReload: false,
+    // hot: false,
     // publicPath: 'http://localhost:5000/frontend/public/',
     // publicPath: '/',
     contentBase: path.resolve(__dirname, '..', 'frontend', 'public'),
@@ -14,14 +17,17 @@ module.exports = merge(common, {
     writeToDisk: true,
     open: true,
     watchContentBase: true,
-    inline: true,
-    liveReload: true,
-    // proxy: [
-    //   {
-    //     context: ['/api', '/auth'],
-    //     target: 'http://localhost:5000',
-    //     secure: false
+    proxy: { 
+      '/api/**': { 
+        target: 'http://localhost:3030', 
+        // secure: false 
+      } 
+    },
+    // proxy: {
+    //   '/api/*': {
+    //     target: 'http://[::1]:3030',
+    //     // changeOrigin: true
     //   }
-    // ]
+    // }
   },
 });
